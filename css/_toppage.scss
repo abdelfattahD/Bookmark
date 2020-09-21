@@ -1,0 +1,110 @@
+// color
+$navColor: #2f354f;
+$midnight: #2c3e50;
+$white: white;
+$blue: blue;
+$blue1: #4f64d9;
+$blue2: rgb(0, 110, 255);
+$black: black;
+$red: red;
+$shadow :#dbd9d994;
+$tabcolor :rgb(122, 122, 124);
+$Footer: #242946;
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+
+    
+
+
+.header{
+    display: flex;
+    margin-top: 2vw;
+
+    .header_logo{
+        margin-left: 6vw;
+        
+    }
+    .header_Menu-mobile{
+        line-height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        @media (max-width:600px) {
+            display: block;
+            margin-left: auto;
+            margin-top: -10px;
+            padding-right: 10px;
+           }
+    }
+
+   
+    nav{
+        margin-left: 26vw;
+        margin-top: -17px;
+        @media (max-width:600px) {
+         display: none;
+         position: absolute;
+         width: 100%;
+         background-color: rgba($color: $navColor, $alpha: 0.9);
+         top: 40px;
+         left: +100%;
+         transition: 0.5s;
+         margin: 0;
+         z-index: 20;
+
+        }
+       
+
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 100%; 
+            @media (max-width:600px) {
+                display: block;
+                text-align: center;
+                padding: 0;
+             } 
+            } 
+            
+             li{
+                 position: relative;
+
+                  :hover {
+                    padding: 1vw 1.2vw;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    color: $red;  
+                   }
+                   
+
+               
+                
+                  a{
+                      text-decoration: none;
+                      padding: 4vw 1.2vw;
+                       font-size: 1.3vw;
+                       @media (max-width:600px) {
+                        color: $white;  
+    
+                    }
+
+                }
+            } 
+         }      
+     }
+     nav.active {
+        left: 0;
+        display: block;
+    }
+ }
